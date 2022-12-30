@@ -1,0 +1,25 @@
+:root {
+  // font sizes
+  --fz-big: 20px;
+  --fz-medium: 18px;
+  --fz-default: 14px;
+  --fz-small: 12px;
+  --fz-extra-small: 10px;
+
+  // colors
+  --gray: #61606F;
+  --black: #292630;
+  --white: #FFFFFF;
+  --darkWhite: #F7F8FD;
+  --blue: #1D5AB6;
+  --lightBlue: #9FC2FF;
+  --lightGrey: #E4E4E4;
+  --purple: #612AFD;
+  --red: #FF2768FF;
+  --text-color: #292630;
+
+  // shadows
+  --shadow-large: drop-shadow(0px 93.2081px 74.5665px rgba(49, 49, 49, 0.1)) drop-shadow(0px 60.4126px 43.6697px rgba(49, 49, 49, 0.0759259)) drop-shadow(0px 35.9024px 23.7508px rgba(49, 49, 49, 0.0607407)) drop-shadow(0px 18.6416px 12.1171px rgba(49, 49, 49, 0.05)) drop-shadow(0px 7.59473px 6.07579px rgba(49, 49, 49, 0.0392593)) drop-shadow(0px 1.72608px 2.93433px rgba(49, 49, 49, 0.0240741));
+  --medium-shaddow: drop-shadow(-5px -5px 10px #FFFFFF) drop-shadow(5px 5px 10px #BABECC);
+  --small-shaddow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}

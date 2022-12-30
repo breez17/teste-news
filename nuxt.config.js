@@ -1,5 +1,23 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  router: {
+    extendRoutes(routes, resolve) {
+      return [
+        {
+          name: 'index',
+          path: '/',
+          component: resolve(__dirname, 'pages/index.vue'),
+          chunkName: 'pages/index.vue'
+        },
+        {
+          name: 'article-item',
+          path: '/article-item/:id',
+          component: resolve(__dirname, 'pages/article-item.vue'),
+          chunkName: 'pages/article-item.vue'
+        },
+      ]
+    }
+  },
   head: {
     title: 'testNews',
     meta: [
@@ -34,7 +52,13 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/toast',
+    '@nuxtjs/moment'
   ],
+
+  publicRuntimeConfig: {
+    baseURL: process.env.VUE_APP_ROOT_API
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -47,6 +71,19 @@ export default {
     manifest: {
       lang: 'en'
     }
+  },
+  toast: {
+    position: 'bottom-right',
+    register: [
+      {
+        name: 'my-error',
+        message: 'Oops...Something went wrong',
+        options: {
+          type: 'error',
+          delay: 5000,
+        }
+      }
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
