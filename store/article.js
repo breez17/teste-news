@@ -22,7 +22,6 @@ const article = {
         await commit("CHANGE_PAGE_SETTINGS", response.data.pageCount);
         await commit("SET_ARTICLES", response.data.news);
         return response.data.news;
-        // this.app.$config.baseURL
     },
     async getArticleByID({ state, commit }, id) {
       const response = await this.$axios.$get(`${this.app.$config.baseURL}news/${id}`);

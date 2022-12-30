@@ -58,7 +58,7 @@ export default {
     }
   },
   async created() {
-   await this.getCurrentPost();
+    await this.getCurrentPost();
   }
 }
 </script>
